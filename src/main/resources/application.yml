@@ -1,2 +1,20 @@
 server:
   port: 9002
+management:
+  server:
+    port: 9092
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: health,info,env,beans,loggers,metrics
+    jmx:
+      exposure:
+        include: health,info,env,beans,loggers,metrics
+  endpoint:
+    health:
+      enabled: true
+    info:
+      enabled: true
+    loggers:
+      enabled: true
