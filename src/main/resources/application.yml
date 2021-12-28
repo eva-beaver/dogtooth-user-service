@@ -1,5 +1,20 @@
 server:
   port: 9002
+
+spring:
+  application:
+    name: USER-SERVICE
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-url:
+        defaultZone: http://localhist:8761/eureka
+      instance:
+        hostname: localhost
+
 management:
   server:
     port: 9092
